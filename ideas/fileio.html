@@ -1,0 +1,112 @@
+
+
+
+<!DOCTYPE HTML>
+<html>
+<head>
+<title></title>
+</head>
+
+<body style="color: white; background-color: black; font-size: 1vw; font-family: monospace; margin-left: 2vw; margin-top: 2vw; line-height: 1.1; width: 95%; min-width: 95%; max-width: 95%; overflow-x: hidden;">
+
+<script>
+
+globalThis.htmlTitleTag = "File IO";
+
+globalThis.contentData = [
+[
+"Files on a Information Retrieval system",
+`
+Under the context of IR file transfer, storage I've been building something to handle and organise my files.
+
+Things to consider are
+- encryption and access
+- organisation schema
+- special formats, binary, compression, algorithms and datastructures
+- searching - both in forward, reverse, tree, indexes, and special query formats
+- displaying publically and categories tagging
+- updates, chaining, permalinking, wiki
+
+
+
+
+
+
+`
+],
+[
+"What is missing from these tools? Something is lacking?",
+`
+- TXT files
+- pics, short vids, long vids
+- audio tracks
+- static html pages
+- dynamic html pages with vanilla js
+- dynamic html pages with network request
+- Flask
+- React
+- Selenium Ruby DSL
+- Wordpress
+- FTP server
+- CGI bindings
+- caching and CDN
+- PHP
+- Java sockets
+- Django Python
+- Spring Java
+- C++ ports
+- Golang
+- Chrome and Chromium
+- Webview and Mobile view
+
+
+
+`
+]
+];
+
+globalThis.document.getElementsByTagName("title")[0].innerHTML = globalThis.htmlTitleTag;
+
+globalThis.setBody = function() {
+
+globalThis.contentString = ``;
+
+for (let sectionData of contentData) {
+globalThis.contentString = [
+globalThis.contentString,
+"<div>",
+`<div style="font-size: 2vw; font-weight: bold;">`,
+sectionData[0],
+`</div>`,
+`<pre>`,
+sectionData[1].trim().split("\n").map(lineX => {
+if (lineX.trim().length === 0){
+return "\n";
+}
+return "\n" + lineX + "\n";
+}).join(""),
+"</pre>",
+"</div>"
+].join("")
+
+}
+
+globalThis.document.getElementsByTagName("body")[0].innerHTML = globalThis.contentString;
+};
+
+
+globalThis.window.onload = function() {
+globalThis.postload = function() {
+globalThis.setBody();
+};
+globalThis.postload();
+};
+
+
+	
+</script>
+</body>
+
+</html>
+
+

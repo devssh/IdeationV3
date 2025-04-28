@@ -1,0 +1,121 @@
+
+
+
+<!DOCTYPE HTML>
+<html>
+<head>
+<title></title>
+</head>
+
+<body style="color: white; background-color: black; font-size: 1vw; font-family: monospace; margin-left: 2vw; margin-top: 2vw; line-height: 1.1; width: 95%; min-width: 95%; max-width: 95%; overflow-x: hidden;">
+
+<script>
+
+globalThis.htmlTitleTag = "Ideation";
+
+globalThis.contentData = [
+[
+"List",
+`
+Activity Log +1
+Syntax coloring
+Connect to database +1
+Event Queue +1
+Bootstrapper
+Code analyser
+Metrics: LoC, Time +1
+Git
+File Write + 1
+Language Tokens .py .js .java
+GPT connection +1
+Website AWS
+Docker
+Printout clinic +1
+Jira board
+Velocity track
+Diff checker
+New file writer + 1
+File Editor
+One time execute file autodelete cronjob +1
+Tic Tac Toe
+Chess Stockfish
+Game of life
+PnC of alphabet to find keywords +1
+SMTP
+Message passing queue on the front end(redux) and backend
+Execute database + 1
+Create new empty file + 1
+Delete file
+Make new directory
+Typecheck everything in javascript and python early and send message to queue
+API contracts
+Redux state viewer on messages queue
+Unified page and views in front end
+Create schema for metrics, code, data, requests, passwords
+Execute bash command freewrite
+Code glossary, syntax glossary, gotta catch em all
+Method list
+Variable list
+Add tests
+Colors HTML
+HTML ascii codes and symbols list
+Check ins with calendar
+
+
+
+
+
+
+
+
+
+
+`
+]
+];
+
+globalThis.document.getElementsByTagName("title")[0].innerHTML = globalThis.htmlTitleTag;
+
+globalThis.setBody = function() {
+
+globalThis.contentString = ``;
+
+for (let sectionData of contentData) {
+globalThis.contentString = [
+globalThis.contentString,
+"<div>",
+`<div style="font-size: 2vw; font-weight: bold;">`,
+sectionData[0],
+`</div>`,
+"<ul>",
+sectionData[1].trim().split("\n").map(lineX => {
+if (lineX.trim().length === 0){
+return "";
+}
+return "<li>" + lineX + "</li>";
+}).join(""),
+"</ul>",
+"</div>"
+].join("")
+
+}
+
+globalThis.document.getElementsByTagName("body")[0].innerHTML = globalThis.contentString;
+};
+
+
+globalThis.window.onload = function() {
+globalThis.postload = function() {
+globalThis.setBody();
+};
+globalThis.postload();
+};
+
+
+	
+</script>
+</body>
+
+</html>
+
+
